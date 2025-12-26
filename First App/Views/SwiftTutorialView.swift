@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SwiftTutorialView.swift
 //  First App
 //
 //  Created by Joshua Chapman on 12/24/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SwiftTutorialView: View {
     var colors: [Color] = [.blue, .cyan, .gray, .green, .indigo, .mint, .orange, .purple, .red]
 //
     var activities = ["Archery", "Baseball", "Basketball", "Bowling", "Boxing", "Cricket", "Curling", "Fencing", "Golf", "Hiking", "Lacrosse", "Rugby", "Squash"]
@@ -36,7 +36,7 @@ struct ContentView: View {
             .transition(.slide)
             .id(id)
             Spacer()
-            Button("Try again!") {
+            Button("Get another!") {
                 withAnimation() {
                     selected = activities.randomElement() ?? "Archery"
                     id += 1
@@ -49,5 +49,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    SwiftTutorialView()
 }
