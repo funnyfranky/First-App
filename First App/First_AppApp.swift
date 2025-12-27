@@ -11,7 +11,17 @@ import SwiftUI
 struct First_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TabView {
+                Tab("Screen 1", systemImage: "train.side.rear.car") {
+                    SwiftTutorialView()
+                }
+                Tab("MainView", systemImage: "train.side.middle.car") {
+                    MainView()
+                }
+                Tab("More", systemImage: "train.side.front.car") {
+                    ContentView()
+                }
+            }
         }
     }
 }

@@ -9,16 +9,16 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
-            Tab("Screen 1", systemImage: "star.fill") {
-                SwiftTutorialView()
-            }
-            Tab("More", systemImage: "lasso") {
-                ContentView()
-            }
+        VStack {
+            Spacer()
+            Text("Last Refreshed: \(Date.now.formatted(date: .omitted, time: .standard))")
+            Spacer()
+            CircleCardView()
+            Spacer()
         }
     }
 }
+
 
 #Preview {
     MainView()
